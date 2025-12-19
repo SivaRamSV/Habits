@@ -18,10 +18,6 @@ A modern, feature-rich habit tracking application inspired by [Loop Habit Tracke
 - **Color Customization** - 11 vibrant color options for habit personalization
 - **Yes/No & Measurable Types** - Support for different habit tracking styles
 
-### 🤖 AI-Powered Suggestions
-- **Gemini AI Integration** - Get personalized habit suggestions based on your goals
-- **Smart Recommendations** - AI analyzes your intentions and suggests actionable habits
-
 ### 📦 Import/Export
 - **Multiple Format Support** - Import from Loop Habit Tracker (.db, .zip, .csv)
 - **Native Export** - Export to SQLite .db format compatible with Loop app
@@ -50,14 +46,7 @@ cd Habits
 npm install
 ```
 
-3. **Set up environment variables**
-Create a `.env.local` file in the root directory:
-```env
-VITE_GEMINI_API_KEY=your_gemini_api_key_here
-```
-Get your API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
-
-4. **Start the development server**
+3. **Start the development server**
 ```bash
 npm run dev
 ```
@@ -74,7 +63,6 @@ Navigate to `http://localhost:5173`
 - **Charts**: Recharts
 - **Icons**: Lucide React
 - **Database**: SQLite (via sql.js for browser-based SQLite)
-- **AI**: Google Gemini API
 
 ## 📁 Project Structure
 
@@ -83,12 +71,10 @@ Habits/
 ├── components/          # React components
 │   ├── HabitCard.tsx   # Habit list item with progress ring
 │   ├── StatsView.tsx   # Detailed statistics view
-│   ├── AIModal.tsx     # AI suggestion interface
 │   ├── AddHabitModal.tsx
 │   ├── EditHabitModal.tsx
 │   └── SettingsModal.tsx
 ├── services/           # Business logic
-│   ├── geminiService.ts    # AI integration
 │   └── importService.ts    # Import/export handlers
 ├── lib/               # Utilities
 │   └── utils.ts       # Helper functions
@@ -109,12 +95,6 @@ Habits/
 2. Click the **Edit** icon (pencil) in the header
 3. Update name, question, or color
 4. Click **Save Changes**
-
-### Using AI Suggestions
-1. Click the **AI** icon on the main screen
-2. Describe your goals (e.g., "I want to be healthier")
-3. Review AI-generated habit suggestions
-4. Click **Add This Habit** on any suggestion
 
 ### Importing Data
 1. Open **Settings** from the main screen
@@ -159,7 +139,9 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
+
+This means you can freely use, modify, and distribute this software, but any derivative works must also be open source under the same license.
 
 ## 🙏 Acknowledgments
 
